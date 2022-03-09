@@ -1,0 +1,57 @@
+#9-1
+#Errors happened:"Restaurant() takes no arguments" init _*2each left&right not*1
+#ERRORS:unexpected indent/unindent does not match any outer indentation level
+# close the def of class ,then write the specific item words
+class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+        
+    def describe_restaurant(self):
+        print("The name of restaurant is "+self.restaurant_name+".")
+        print("The cuisine type of restaurant is "+self.cuisine_type+".")
+        
+    def open_restaurant(self):
+        print(self.restaurant_name.title()+" is opening.")
+  
+        
+    
+ 
+restaurant=Restaurant('Xname','bread')
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+#9-2
+res1=Restaurant('Haidilao', 'Huoguo')
+res2=Restaurant('Yangguofu', 'Malatang')
+res3=Restaurant('KFC', 'fast food')
+
+res1.describe_restaurant()
+res2.describe_restaurant()
+res3.describe_restaurant()
+
+#9-3
+class User():
+    def __init__(self,first_name,last_name,gender,age):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.gender=gender
+        self.age=age
+ #ERROR1:describe_user() takes 0 positional arguments but 1 was given
+ #reason:define methods without self in the ()   
+ #ERROR2:can only concatenate str (not "int") to str
+ #reason:use + to connect ,can only concentrate str, else use ,
+    def describe_user(self):
+        print('The first name,last name,gender and age are: '+self.first_name+' '+self.last_name+' '+self.gender+' ',self.age)
+        
+    def greet_user(self):
+        print("Welcome,"+self.first_name+' '+self.last_name)
+    
+celia=User('Celianthus', 'Drawerlier', 'female', 17)
+refiliar=User('Refiliar', 'Nicole', 'male', 22)
+
+celia.describe_user()
+celia.greet_user()
+refiliar.describe_user()
+refiliar.greet_user()
